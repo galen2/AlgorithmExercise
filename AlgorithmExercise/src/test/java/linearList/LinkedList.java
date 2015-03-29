@@ -2,7 +2,9 @@ package linearList;
 
 import org.junit.Test;
 
-public class LinkedList {
+import util.BaseTest;
+
+public class LinkedList extends BaseTest{
 
 	@Test
 	public void linkedListDemo(){
@@ -16,9 +18,16 @@ public class LinkedList {
 	public void SinglyLinkedListDemo(){
 		SinglyLinkedList<String> list = new SinglyLinkedList<String>();
 		list.add("a");
+		list.add("b");
+		list.add("c");
+	}
+	@Test
+	public void ReverseLinkedListDemo(){
+		ReverseLinkedList<String> list  = new ReverseLinkedList<String>();
 		list.add("a");
-		list.add("a");
-		System.out.println(list);
-		System.out.println(list.remove(8));
+		list.add("b");
+		list.add("c");
+		list.reverse();
+		printData (list);
 	}
 }

@@ -24,8 +24,23 @@ public class SinglyLinkedList<E> implements LList<E>{
 		return null;
 	}
 
+	/**
+	 * 操作成功返回原对象，否则返回NULL
+	 */
 	public E set(int index, E element) {
-		// TODO Auto-generated method stub
+		if(this.head!=null && index >= 0 && element != null){
+			int j = 0 ;
+			Node<E> p = this.head;
+			while(p!= null && j!=index){
+				j++;
+				p = p.next;
+			}
+			if(p!=null){
+				E old = p.data;
+				p.data = element;
+				return old;
+			}
+		}
 		return null;
 	}
 
