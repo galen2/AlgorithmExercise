@@ -1,5 +1,9 @@
 package tree.binarytree;
 
+/**
+ * 二叉树的遍历和构建 
+ * @author Admin
+ */
 public class BinaryTree<E> {
 	
 	public BinaryNode<E> root;
@@ -36,6 +40,9 @@ public class BinaryTree<E> {
 		}
 	}
 	
+	/**
+	 * 中根遍历
+	 */
 	public void inOrder(){
 		System.out.println("中根遍历");
 		inOrder(root);
