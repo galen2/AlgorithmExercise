@@ -1,16 +1,39 @@
 package util;
 
-import java.lang.reflect.Array;
+import java.util.Collection;
 
 public class BaseTest {
 
 	public void printData(Object obj){
 		System.out.println("begin===========");
-		System.out.println(obj);
-		System.out.println("end ============");
+		if(obj instanceof Collection){
+			printCollection((Collection)obj);
+		}else if(obj.getClass().isArray()){
+			printArray((Object[])obj);
+		}else{
+			print(obj);
+		}
+		System.out.println("  end ============");
 	}
 	
-	public  int[] random(int n){
+	
+	private void printCollection(Collection obj){
+		for(Object one : obj){
+			print(one);
+		}
+	}
+	
+	private void printArray(Object[] obj){
+		for(Object one : obj){
+			print(one);
+		}
+	}
+	
+	private void print(Object data){
+		System.out.print(data);
+	}
+	
+	public  int[]  random(int n){
 		if(n>0){
 			int table[] = new int[n];
 			for(int i =0;i<table.length;i++){

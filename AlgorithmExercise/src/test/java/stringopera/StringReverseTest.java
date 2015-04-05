@@ -3,8 +3,9 @@ package stringopera;
 import org.junit.Test;
 
 import sringopera.StringReverse;
+import util.BaseTest;
 
-public class StringReverseTest {
+public class StringReverseTest extends BaseTest{
 
 	@Test
 	public void swapDemo(){
@@ -17,8 +18,8 @@ public class StringReverseTest {
 	public void reverse2Demo(){
 		String sourse = "i am a student";
 		char[] charArray = sourse.toCharArray();
-		StringReverse.swap2(charArray,0,sourse.length());
-		print(charArray);
+		StringReverse.swap2(charArray,0,sourse.length()-1);
+		printData(charArray);
 	}
 	
 	
@@ -28,10 +29,4 @@ public class StringReverseTest {
 		System.out.println(t);
 	}
 	
-	
-	public void print(Object object){
-		System.out.println("begin===================="+object);
-		System.out.println(object);
-		System.out.println("end======================"+object);
-	}
 }
