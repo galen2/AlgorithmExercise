@@ -19,14 +19,19 @@ public class StringReverseTest extends BaseTest{
 		String sourse = "i am a student";
 		char[] charArray = sourse.toCharArray();
 		StringReverse.swap2(charArray,0,sourse.length()-1);
-		printData(charArray);
+		print(charArray);
 	}
-	
 	
 	@Test
 	public void clinet(){
 		StringReverseTest t = new StringReverseTest();
 		System.out.println(t);
+	}
+	
+	private void print(char[] charArray){
+		for(char a : charArray){
+			System.out.print(a);
+		}
 	}
 	
 }

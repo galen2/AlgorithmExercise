@@ -15,7 +15,6 @@ public class StringReverse {
 	}
 	
 
-
 	/**
 	 * 两两相互异或，只有两个比较位不同的时则为1，相同则为0
 	 */
